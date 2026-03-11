@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AVL Tree Visualizer</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    font-family: Arial;
+    text-align:center;
+    background:#f4f4f4;
+}
+
+h1{
+    margin-top:20px;
+}
+
+.controls{
+    margin:20px;
+}
+
+input{
+    padding:10px;
+    font-size:16px;
+}
+
+button{
+    padding:10px 15px;
+    font-size:16px;
+    margin-left:5px;
+    cursor:pointer;
+}
+
+#tree{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>AVL Tree Visualizer</h1>
+
+<div class="controls">
+
+<input type="number" id="value" placeholder="Enter value">
+
+<button onclick="insertValue()">Insert</button>
+
+<button onclick="resetTree()">Reset</button>
+
+</div>
+
+<div id="tree"></div>
+
+<script src="avl.js"></script>
+
+<script>
+
+function resetTree(){
+
+    root=null
+
+    document.getElementById("tree").innerHTML=""
+
+}
+
+</script>
+
+</body>
+
+</html>
